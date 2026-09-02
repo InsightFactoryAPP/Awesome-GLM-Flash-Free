@@ -4,6 +4,8 @@
 
 ### Cloud Hosted / SaaS (No Setup Required)
 
+> **Market Overview (2026):** The global AI coding assistant & LLM developer tools market is estimated at **$9.3B–$11.0B in 2026** (growing at ~27% CAGR). The sector is currently **moderately to highly fragmented** rather than winner-take-all, with developers actively deploying a multi-tool stack combining native web chats, autonomous agents, and multi-model router gateways.
+
 | Product / Service | Company Size (Valuation / ARR) | Description | Pricing (Starting Tier) | Free Tier / Trial Limits |
 | :--- | :--- | :--- | :--- | :--- |
 | **Official Z.ai Consumer Chat** | **~$62B–$71B Market Cap** ($1.6B ARR) | Access the model directly for free on the official Z.ai web browser chat platform. | Paid plans start at $18/mo (Lite GLM Coding Plan; yearly: $12.60/mo) | Free forever for web chat & Flash API (1 concurrent request limit, no credit card required) |
