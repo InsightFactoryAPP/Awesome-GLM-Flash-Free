@@ -15,6 +15,13 @@
 | **FreeBuff Coding Agent** | **<$1M Bootstrapped** (Indie / Ad-Supported) | Fully accessible at no cost on `freebuff.com` via developer-subsidised ads. | $0 / Free (100% ad-supported model, no subscription fees) | Free forever with unlimited prompts supported by in-CLI text ads (no credit card or API key required) |
 
 ### Self-Hosted / Open-Source (Requires Own Hardware)
-* **Hugging Face Repository:** Download the raw model weights completely for free from the [Z.ai Hugging Face Repository](https://huggingface.co) under the MIT license.
-* **Unsloth AI Quantizations:** Access optimized, low-memory quantizations via [Unsloth AI Docs](https://unsloth.ai) for easier local running.
+
+* **Ollama** [![GitHub stars](https://img.shields.io/github/stars/ollama/ollama?style=social&color=white)](https://github.com/ollama/ollama/stargazers): Run GLM and open model weights locally with single-command setup and standard REST API endpoints.
+* **Hugging Face Transformers** [![GitHub stars](https://img.shields.io/github/stars/huggingface/transformers?style=social&color=white)](https://github.com/huggingface/transformers/stargazers): Native model loading, tokenizer integration, and fine-tuning pipelines for GLM architectures via Hugging Face Hub.
+* **vLLM Engine** [![GitHub stars](https://img.shields.io/github/stars/vllm-project/vllm?style=social&color=white)](https://github.com/vllm-project/vllm/stargazers): High-throughput, low-latency LLM serving engine powered by PagedAttention with built-in GLM architecture support.
+* **Unsloth AI Quantizations** [![GitHub stars](https://img.shields.io/github/stars/unslothai/unsloth?style=social&color=white)](https://github.com/unslothai/unsloth/stargazers): 2x–5x faster and 80% less memory fine-tuning with optimized GGUF & 4-bit quantizations for GLM Flash models.
+* **llama.cpp** [![GitHub stars](https://img.shields.io/github/stars/ggerganov/llama.cpp?style=social&color=white)](https://github.com/ggerganov/llama.cpp/stargazers): Pure C/C++ local inference runtime on Apple Silicon, CPU, and CUDA for running quantized GLM GGUF checkpoints.
+* **THUDM ChatGLM-6B** [![GitHub stars](https://img.shields.io/github/stars/THUDM/ChatGLM-6B?style=social&color=white)](https://github.com/THUDM/ChatGLM-6B/stargazers): Pioneer open-source bilingual conversational foundation model by Tsinghua KEG and Zhipu AI.
+* **THUDM GLM-4** [![GitHub stars](https://img.shields.io/github/stars/THUDM/GLM-4?style=social&color=white)](https://github.com/THUDM/GLM-4/stargazers): Official open-source repository for the GLM-4 family, multimodal support, and Flash model weights.
+* **THUDM ChatGLM3** [![GitHub stars](https://img.shields.io/github/stars/THUDM/ChatGLM3?style=social&color=white)](https://github.com/THUDM/ChatGLM3/stargazers): Open conversational GLM model with built-in tool execution, Code Interpreter, and agent capabilities.
 
