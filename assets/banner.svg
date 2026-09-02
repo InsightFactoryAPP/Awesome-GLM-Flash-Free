@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="primary-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="glow-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="soft-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      @keyframes pulse-glow {
+        0%, 100% { opacity: 0.35; transform: scale(1); }
+        50% { opacity: 0.7; transform: scale(1.08); }
+      }
+      @keyframes float-particle {
+        0%, 100% { transform: translateY(0px) translateX(0px); }
+        50% { transform: translateY(-12px) translateX(8px); }
+      }
+      @keyframes float-particle-rev {
+        0%, 100% { transform: translateY(0px) translateX(0px); }
+        50% { transform: translateY(12px) translateX(-8px); }
+      }
+      @keyframes border-shimmer {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: 400; }
+      }
+      .pulsing-orb {
+        transform-origin: 950px 200px;
+        animation: pulse-glow 4s ease-in-out infinite;
+      }
+      .pulsing-orb-2 {
+        transform-origin: 200px 100px;
+        animation: pulse-glow 6s ease-in-out infinite;
+      }
+      .particle-1 { animation: float-particle 5s ease-in-out infinite; }
+      .particle-2 { animation: float-particle-rev 6s ease-in-out infinite; }
+      .particle-3 { animation: float-particle 7s ease-in-out infinite; }
+      .animated-border {
+        stroke-dasharray: 20, 10;
+        animation: border-shimmer 20s linear infinite;
+      }
+      .title-text {
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+      }
+      .sub-text {
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+      }
+      .badge-text {
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="400" rx="16" fill="url(#bg-grad)" />
+
+  <!-- Animated Ambient Glow Spheres -->
+  <circle class="pulsing-orb" cx="950" cy="200" r="180" fill="url(#glow-grad)" filter="url(#soft-glow)" />
+  <circle class="pulsing-orb-2" cx="180" cy="120" r="130" fill="url(#glow-grad)" filter="url(#soft-glow)" />
+
+  <!-- Neural Mesh / Geometric Constellation -->
+  <g opacity="0.25" stroke="#38bdf8" stroke-width="1">
+    <line x1="100" y1="80" x2="250" y2="150" />
+    <line x1="250" y1="150" x2="180" y2="300" />
+    <line x1="250" y1="150" x2="400" y2="120" />
+    <line x1="850" y1="90" x2="980" y2="180" />
+    <line x1="980" y1="180" x2="900" y2="320" />
+    <line x1="980" y1="180" x2="1100" y2="240" />
+    <line x1="1100" y1="240" x2="1150" y2="120" />
+    <line x1="900" y1="320" x2="1050" y2="350" />
+  </g>
+
+  <!-- Floating Star Particles -->
+  <g class="particle-1">
+    <circle cx="250" cy="150" r="4" fill="#38bdf8" filter="url(#glow)" />
+    <circle cx="980" cy="180" r="5" fill="#818cf8" filter="url(#glow)" />
+    <circle cx="1150" cy="120" r="3" fill="#c084fc" />
+  </g>
+  <g class="particle-2">
+    <circle cx="100" cy="80" r="3" fill="#818cf8" />
+    <circle cx="900" cy="320" r="4" fill="#38bdf8" filter="url(#glow)" />
+    <circle cx="400" cy="120" r="3.5" fill="#c084fc" />
+  </g>
+  <g class="particle-3">
+    <circle cx="180" cy="300" r="3.5" fill="#38bdf8" />
+    <circle cx="850" cy="90" r="3" fill="#c084fc" />
+    <circle cx="1100" cy="240" r="4" fill="#818cf8" filter="url(#glow)" />
+  </g>
+
+  <!-- Outer Rounded Tech Border -->
+  <rect x="12" y="12" width="1176" height="376" rx="14" fill="none" stroke="url(#border-grad)" stroke-width="1.5" class="animated-border" />
+
+  <!-- Central Header Content -->
+  <g transform="translate(100, 70)">
+    <!-- Category Pill Badge -->
+    <g transform="translate(0, 0)">
+      <rect width="210" height="32" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="1" />
+      <circle cx="16" cy="16" r="5" fill="#10b981" filter="url(#glow)" />
+      <text x="30" y="21" fill="#e2e8f0" class="badge-text" letter-spacing="0.5">⚡ 100% FREE &amp; ZERO-COST</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="90" fill="url(#primary-grad)" class="title-text" font-size="52" filter="url(#glow)">Awesome GLM Flash</text>
+
+    <!-- Subtitle / Tagline -->
+    <text x="0" y="135" fill="#94a3b8" class="sub-text" font-size="20">
+      Curated guide to free GLM models, autonomous coding agents, SaaS portals, &amp; runtimes
+    </text>
+
+    <!-- Feature Feature Badges Row -->
+    <g transform="translate(0, 180)">
+      <!-- Badge 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="180" height="38" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="16" y="24" fill="#38bdf8" class="badge-text">⚡ GLM-5.3 &amp; 4 Flash</text>
+      </g>
+
+      <!-- Badge 2 -->
+      <g transform="translate(195, 0)">
+        <rect width="180" height="38" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="16" y="24" fill="#818cf8" class="badge-text">🤖 Free Coding Agents</text>
+      </g>
+
+      <!-- Badge 3 -->
+      <g transform="translate(390, 0)">
+        <rect width="180" height="38" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="16" y="24" fill="#c084fc" class="badge-text">🌐 Zero-Credit SaaS</text>
+      </g>
+
+      <!-- Badge 4 -->
+      <g transform="translate(585, 0)">
+        <rect width="195" height="38" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="16" y="24" fill="#34d399" class="badge-text">🚀 Ollama / vLLM / Unsloth</text>
+      </g>
+    </g>
+  </g>
+</svg>
